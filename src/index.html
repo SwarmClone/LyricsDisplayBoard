@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="styles.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>歌词显示板</title>
+    <script type="module" src="main.js" defer></script>
+  </head>
+
+  <body>
+    <input type="file" id="lrcFile" accept=".lyrics" style="display: none;">
+    <div id="button-container">
+      <label for="lrcFile" class="common-button">选择文件</label>
+      <button onclick="start()" class="common-button">开始播放</button>
+    </div>
+    <div id="lyrics-container">
+        <div id="lyrics-wrapper">
+            <div id="main-lyrics"></div>
+            <div id="second-lyrics"></div>
+        </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,145 @@
+@font-face {
+  font-family: '字库星球飞扬体';
+  src: url('./assets/fonts/字库星球飞扬体.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+4E00-9FFF, U+3400-4DBF, U+F900-FAFF, U+20000-2A6DF, U+2A700-2B73F, U+2B740-2B81F, U+2B820-2CEAF, U+2F800-2FA1F; 
+}
+
+body {
+  background: #000;
+  color: #fff;
+  font-family: '字库星球飞扬体', 'Acosta', sans-serif;
+  margin: 0;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+#lyrics-container {
+  border: none; 
+  padding: 0; 
+  margin: 0; 
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#main-lyrics, #second-lyrics {
+  text-align: center;
+  white-space: nowrap;
+  position: static;
+  width: auto;
+  left: auto;
+  transform: none;
+}
+
+#main-lyrics {
+  font-size: 100px;
+}
+
+#second-lyrics {
+  font-size: 0.7em;
+}
+
+.L {
+  font-size: 2em;
+}
+
+.M {
+  font-size: 0.7em;
+}
+
+.S {
+  font-size: 0.5em;
+}
+
+/* 添加按钮容器样式 */
+#button-container {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+  z-index: 1000; /* 确保按钮显示在最上层 */
+}
+
+#button-container button {
+  background: #fff;
+  color: #000;
+  padding: 8px 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.9em;
+  transition: transform 0.2s;
+}
+
+#button-container button:hover {
+  transform: scale(1.05);
+}
+
+#lyrics-wrapper {
+  position: absolute;
+  width: 100%;
+  transition: transform 0.6s cubic-bezier(0.2, 0, 0.2, 1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.lyric-line {
+  opacity: 0.3;
+  font-size: 1.5em;
+  margin: 8px 0;
+  text-align: center;
+  white-space: nowrap;
+  pointer-events: none;
+  font-family: inherit;
+  transition: all 0.6s cubic-bezier(0.2, 0, 0.2, 1);
+  backface-visibility: hidden;
+}
+
+.current {
+  opacity: 1;
+  transform: scale(1.1);
+  text-shadow: 0 0 10px #fff, 0 0 20px #fff;
+  animation: glow 1.5s ease-in-out infinite;
+}
+
+@keyframes glow {
+  0%, 100% { text-shadow: 0 0 10px #fff, 0 0 20px #fff; }
+  50% { text-shadow: 0 0 20px #fff, 0 0 40px #fff; }
+}
+
+#main-lyrics span {
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+#main-lyrics span.enlarge {
+    transform: scale(1.5);
+}
+
+/* 定义通用按钮样式 */
+.common-button {
+  background: #fff;
+  color: #000;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.9em;
+  transition: transform 0.2s;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.common-button:hover {
+  transform: scale(1.05);
+}
