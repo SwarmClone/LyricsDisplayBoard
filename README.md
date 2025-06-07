@@ -20,7 +20,7 @@
 
 一个完整的歌词文件示例：
 
-```powershell
+```
 <head>
 main_language=CN;
 second_language=EN;
